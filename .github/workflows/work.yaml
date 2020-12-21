@@ -16,6 +16,9 @@ env:
   JD_COOKIE: ${{ secrets.JD_COOKIE }}
   JD_DUAL_COOKIE: ${{ secrets.JD_DUAL_COOKIE }}
   PUSH_KEY: ${{ secrets.PUSH_KEY }}
+  CAD_COOKIE: ${{ secrets.CAD_COOKIE }}
+  YD_SESSIONID: ${{ secrets.YD_SESSIONID }}
+  YD_COOKIE: ${{ secrets.YD_COOKIE }}
   UPLOAD_BESULT_DIR: true
 
 jobs:
