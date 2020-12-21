@@ -111,7 +111,8 @@ function main() {
     // 2、替换cookie
     setupCookie()
     // 3、执行脚本
-    exec(`node '${js_path}' >> '${result_path}'`);
+    //exec(`node '${js_path}' >> '${result_path}'`);
+    exec(`node ./sign.js >> '${result_path}'`);
     // 4、发送推送
     sendNotificationIfNeed() 
   }).catch((err)=>{
