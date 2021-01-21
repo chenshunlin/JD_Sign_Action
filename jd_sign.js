@@ -24,6 +24,8 @@ const result_path = './result.txt'
 const result_path2 = './result2.txt'
 // 错误信息输出路劲
 const error_path = './error.txt'
+// 下载脚本路劲
+const jslocal_path = './sign.js'
 
 Date.prototype.Format = function (fmt) {
   var o = {
@@ -117,7 +119,7 @@ function main() {
     // 3、执行脚本
     exec(`node '${js_path}' >> '${result_path}'`);
     
-    //exec(`node ./sign.js >> '${result_path2}'`);
+    exec(`node '${jslocal_path}' >> '${result_path2}'`);
     
     // 4、发送推送
     sendNotificationIfNeed() 
