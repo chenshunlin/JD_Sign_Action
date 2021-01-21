@@ -77,8 +77,9 @@ function sendNotificationIfNeed() {
 
   let text = "京东签到_" + dateFormat();
   //let desp = fs.readFileSync(result_path, "utf8")
-  let desp = fs.readFileSync(result_path2, "utf8") + fs.readFileSync(result_path, "utf8")
-  
+  let desp1 =  fs.readFileSync(result_path, "utf8")
+  let desp2 =  fs.readFileSync(result_path2, "utf8")
+  let desp = desp1 + desp2
 
   // 去除末尾的换行
   let SCKEY = push_key.replace(/[\r\n]/g,"")
