@@ -75,14 +75,14 @@ function sendNotificationIfNeed() {
 
   let text = "京东签到_" + dateFormat();
   let desp1 = fs.readFileSync(result_path, "utf8")
-  let desp2 = fs.readFileSync(result_path2, "utf8")
+  //let desp2 = fs.readFileSync(result_path2, "utf8")
 
   // 去除末尾的换行
   let SCKEY = push_key.replace(/[\r\n]/g,"")
 
   const options ={
     uri:  `https://sc.ftqq.com/${SCKEY}.send`,
-    form: { text, desp2+ desp1 },
+    form: { text, desp1 },
     json: true,
     method: 'POST'
   }
@@ -116,7 +116,7 @@ function main() {
     // 3、执行脚本
     exec(`node '${js_path}' >> '${result_path}'`);
     
-    exec(`node ./sign.js >> '${result_path2}'`);
+    //exec(`node ./sign.js >> '${result_path2}'`);
     
     // 4、发送推送
     sendNotificationIfNeed() 
