@@ -12,8 +12,8 @@ async function request(url){
     });
 }
 
-var data = ["3205226", "7191760", "7202389", "422539"];
-var name = ["爱他美奶粉", "西数硬盘2T", "纸尿片", "伊利奶粉"];
+var data = ["3205226", "100010581822", "7202389", "422539"];
+var name = ["爱他美奶粉", "路由器", "纸尿片", "伊利奶粉"];
 var host = "https://p.3.cn/prices/mgets?skuIds=J_";
 async function test(){
     for(let i = 0; i < data.length; i++){
